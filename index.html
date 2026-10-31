@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#267b39">
+  <title>JUMANJI — Telugu Village Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hud">
+      <div class="logo">
+        <div class="logo-leaves">🌿</div>
+        <div class="logo-title">JUMANJI</div>
+        <div class="logo-sub">THE WILD ADVENTURE</div>
+      </div>
+      <div class="score-card"><span>SCORE</span><b id="score">0</b></div>
+      <div class="score-card"><span>BEST</span><b id="best">0</b></div>
+      <button id="soundBtn" class="round-btn" aria-label="Toggle sound">🔊</button>
+    </header>
+
+    <section class="stage">
+      <canvas id="game" width="960" height="640" aria-label="Jumanji game"></canvas>
+
+      <div class="start-panel" id="startPanel">
+        <h2>START GAME</h2>
+        <p>Tap / Click / Press SPACE<br>to fly!</p>
+        <div class="control-icons"><span>👆</span><span>🖱️</span><kbd>SPACE</kbd></div>
+        <button id="startBtn">▶ START ADVENTURE</button>
+      </div>
+
+      <div class="gameover-panel hidden" id="gameOverPanel">
+        <div class="reaction">😵</div>
+        <h2>AYYOO!</h2>
+        <p>Score: <b id="finalScore">0</b></p>
+        <p>Best: <b id="finalBest">0</b></p>
+        <button id="againBtn">↻ PLAY AGAIN</button>
+      </div>
+
+      <div class="toast" id="toast">THE ADVENTURE BEGINS!</div>
+    </section>
+
+    <footer class="help">
+      <span>🌴 AVOID THE OBSTACLES</span>
+      <span>👆 TAP ANYWHERE TO FLY</span>
+      <span>🏆 BEAT YOUR BEST SCORE</span>
+    </footer>
+    <audio id="music" src="jumanji-background.mp3" preload="auto" loop></audio>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
